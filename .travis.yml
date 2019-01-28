@@ -1,0 +1,17 @@
+language: node_js
+cache:
+  directories:
+    - ~/.npm
+node_js:
+  - 'lts/*'
+script: npm run build
+deploy:
+  provider: npm
+  email: berkeleybross@gmail.com
+  api_key:
+    secure: UtJ0J8X/DqaYXZRm0wLhEKMbZQF60BBwMK0W8AuY9l9GgT2ZiNlNOZYRrHKNV0dPtB4cTDgrt3F7fxGyosBeEhgOHvrI+rPKiD6GuIEHhgLORDCZjY0R53xlkZ1+VPnZujrIVykuCdphHffIUav8rziTlwDeV9e3RwbxhDFK+yPeK0p21hufGFdgQGdkhKY8flXvRy04l5c3VKinvMEyxLWOw0MwL+kcylmEKuK5hFXCWfuKTKWBDAs5andk0ts2elUJMMXwf/dVnU4POT8iVG66dp0mXQgb80WoiVdjrPVkHN9rENQwVZZQpF9DLSHpOvDfmW1cYEoSrdcQxkVXvmhcZqTe6g7PUOavbwP+LJlsLiz06jPWziK3YPbzs+nwdcAlx2OAPh8HuxoSnOy4Zj3v6zSVkzqzPA95e6feOTIVP+qzmB45ufnd8OYGjpz5RGbOJV4VZmIvVvWDNt/xCmm0jg5YZuC/JfvSz3k/O5GYv1cKQBL0xUAd1sxbAI/l608QmGx8EPNLd8APdWnMpTqUIIuhOD8NqlYJvZpqJQpauzqgjlQmY3EwxQAYqTaA0cuCH841VH8U4fI+dRTiaMdSlRR65fvccH9LOuMtQnHi39Q6H+6TDM1T5rpBOOyN/9Ki5jGuvUUWasEuKHpRbiLEO/RdwqAfsIH4gFd9TRk=
+  on:
+    tags: true
+    branch: master
+    repo: berkeleybross/qe
+  skip_cleanup: true # Need dist folder
