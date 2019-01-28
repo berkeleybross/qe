@@ -1,0 +1,14 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "node_modules": true,
+    "package-lock.json": true,
+    ".rpt2_cache": true,
+    "coverage": true,
+    "dist": true
+  },
+  "editor.formatOnSave": true,
+  "scss.validate": false,
+  "stylelint.enable": true
+}

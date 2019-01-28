@@ -1,0 +1,8 @@
+# Build artifacts
+/coverage/
+/dist/
+/node_modules/
+/.rpt2_cache/
+
+# Invisible OS files
+*.DS_Store
