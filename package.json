@@ -1,6 +1,6 @@
 {
   "name": "@berkeleybross/qe",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Quality engineering suite",
   "main": "dist/@berkeleybross/qe.umd.js",
   "module": "dist/@berkeleybross/qe.es5.js",
