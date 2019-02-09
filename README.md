@@ -1,6 +1,10 @@
 # QE - Quality Engineer Suite
 
-_Until this project reaches a `1.0` release, breaking changes will be released with a new minor version. For example `0.5.1`, and `0.5.4` will have the same API, but `0.6.0` will have breaking changes._
+[![npm version](https://img.shields.io/npm/v/@berkeleybross/qe.svg?style=flat-square)](https://www.npmjs.org/package/@berkeleybross/qe)
+[![npm downloads](https://img.shields.io/npm/dm/@berkeleybross/qe.svg?style=flat-square)](http://npm-stat.com/charts.html?package=@berkeleybross/qe)
+[![Build Status](https://travis-ci.com/berkeleybross/qe.svg?branch=master)](https://travis-ci.com/berkeleybross/qe)
+
+_Until this project reaches a `1.0` release, breaking changes will be released with a new minor version. For example `0.5.1`, and `0.5.4` will have a backwards-compatible API, but `0.6.0` will have breaking changes._
 
 ### Examples
 
