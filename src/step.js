@@ -13,7 +13,7 @@ export function addStepStart(name, options, callback) {
   stepStarts[name] = callback
   StepRunner.prototype[name] = function(...args) {
     return this[START]().pipe(function() {
-      callback.apply(this, args)
+      return callback.apply(this, args)
     })
   }
 }
@@ -26,9 +26,10 @@ export function replaceStepStart(name, options, callback) {
   }
 
   let original = stepStarts[name]
+  stepStarts[name] = callback
   StepRunner.prototype[name] = function(...args) {
     return this[START].pipe(function() {
-      callback.apply(this, [original, args])
+      return callback.apply(this, [original, ...args])
     })
   }
 }
@@ -42,8 +43,8 @@ export function addCommand(name, options, callback) {
 
   commands[name] = callback
   Step.prototype[name] = function(...args) {
-    return this[START](function(subject) {
-      callback.apply(this, [subject, ...args])
+    return this.pipe(function(subject) {
+      return callback.apply(this, [subject, ...args])
     })
   }
 }
@@ -56,9 +57,10 @@ export function replaceCommand(name, options, callback) {
   }
 
   let original = commands[name]
+  stepStarts[name] = callback
   Step.prototype[name] = function(...args) {
     return this.pipe(function(subject) {
-      callback.apply(this, [original, subject, ...args])
+      return callback.apply(this, [original, subject, ...args])
     })
   }
 }
