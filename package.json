@@ -1,6 +1,6 @@
 {
   "name": "@berkeleybross/qe",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Quality engineering suite",
   "main": "dist/@berkeleybross/qe.umd.js",
   "module": "dist/@berkeleybross/qe.es5.js",
@@ -28,9 +28,16 @@
   },
   "homepage": "https://github.com/berkeleybross/qe#readme",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-core": "^6.26.3",
+    "babel-plugin-root-import": "^6.1.0",
     "cross-env": "^5.2.0",
     "eslint": "^5.12.1",
     "eslint-config-prettier": "^4.0.0",
@@ -43,11 +50,26 @@
     "prettier": "^1.16.1",
     "rimraf": "^2.6.3",
     "rollup": "^1.1.2",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-sourcemaps": "^0.4.2"
   },
-  "devDependencies": {},
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "8"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "babel-plugin-root-import"
+      ]
+    ]
+  },
   "prettier": {
     "semi": false,
     "singleQuote": true
